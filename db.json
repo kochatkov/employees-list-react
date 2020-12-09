@@ -1,0 +1,49 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "fullName": "Serhey Ivanov",
+      "role": "Foremen",
+      "businessLocation": "Seaside Horse",
+      "email": "123@gmail.com",
+      "phone": "098-602-33-22-111",
+      "hourlyRate": "20/h"
+    },
+    {
+      "id": 2,
+      "fullName": "Vlad Sergeyeev",
+      "role": "Foremen",
+      "businessLocation": "Seaside Horse",
+      "email": "123@gmail.com",
+      "phone": "098-602-33-22-111",
+      "hourlyRate": "20/h"
+    },
+    {
+      "id": 3,
+      "fullName": "Ivan Ivanov",
+      "role": "Foremen",
+      "businessLocation": "Seaside Horse",
+      "email": "123@gmail.com",
+      "phone": "098-602-33-22-111",
+      "hourlyRate": "20/h"
+    },
+    {
+      "id": 4,
+      "fullName": "Serhey Branch",
+      "role": "Foremen",
+      "businessLocation": "Seaside Horse",
+      "email": "123@gmail.com",
+      "phone": "098-602-33-22-111",
+      "hourlyRate": "20/h"
+    },
+    {
+      "id": 5,
+      "fullName": "Serhey Branch",
+      "role": "Foremen",
+      "businessLocation": "Seaside Horse",
+      "email": "123@gmail.com",
+      "phone": "098-602-33-22-111",
+      "hourlyRate": "20/h"
+    }
+  ]
+}

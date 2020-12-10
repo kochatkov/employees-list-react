@@ -6,7 +6,9 @@ const Employee = (props) => {
   return (
     <tr className={classes.Employee}>
       <td className={classes['Employee__cell']}>{props.id}</td>
-      <input type="checkbox" />
+      <td>
+        <input type="checkbox" />
+      </td>
       <td className={classes['Employee__cell']}>{props.fullName}</td>
       <td className={classes['Employee__cell']}>{props.role}</td>
       <td className={classes['Employee__cell']}>{props.businessLocation}</td>

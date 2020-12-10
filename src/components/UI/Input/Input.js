@@ -13,7 +13,7 @@ const Input = (props) => {
         type={inputType}
         id={htmlFor}
         value={props.value}
-        // onChange={props.onChange}
+        onChange={props.onChange}
       />
     </div>
   );

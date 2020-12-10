@@ -2,14 +2,16 @@ import React, { useEffect, useState } from 'react';
 import EmployeeList from './EmployeeList';
 import TableHead from './TableHead';
 import Button from '../../components/UI/Button';
-import Input from '../../components/UI/Input';
 import ModalWindow from '../../components/ModalWindow';
+import AddEmployeeForm from '../AddEmployee';
 import axios from 'axios';
 
 import classes from './Employees.module.scss';
 
 const Employees = () => {
   const [employees, setEmployees] = useState([]);
+  const [isOpen, setIsOpen] = useState(false);
+  const [isButtonDisabled, setIsButtonDisabled] = useState(false);
 
   const fetchData = () => {
     axios
@@ -20,6 +22,10 @@ const Employees = () => {
       .catch((e) => {
         throw e;
       });
+  };
+
+  const modalHandler = () => {
+    setIsOpen(true);
   };
 
   useEffect(() => {
@@ -33,19 +39,19 @@ const Employees = () => {
         <EmployeeList employees={employees} />
       </table>
       <div className={classes['Employees__buttons']}>
-        <Button>Add employee</Button>
-        <Button>Edit</Button>
+        <Button onClick={modalHandler}>Add employee</Button>
+        <Button disabled={isButtonDisabled}>Edit</Button>
         <Button>Delete</Button>
       </div>
-      <ModalWindow>
-        <Input label={'Full Name'} />
-        <Input label={'Role'} />
-        <Input label={'Business Location'} />
-        <Input label={'Email'} />
-        <Input label={'Phone'} />
-        <Input label={'Hourly Rate'} />
-        <Button>Add employee</Button>
-      </ModalWindow>
+      {isOpen && (
+        <ModalWindow>
+          <AddEmployeeForm
+            setIsOpen={setIsOpen}
+            employees={employees}
+            fetchData={fetchData}
+          />
+        </ModalWindow>
+      )}
     </>
   );
 };

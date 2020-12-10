@@ -14,6 +14,7 @@ const EmployeeList = (props) => {
           email={employee.email}
           phone={employee.phone}
           hourlyRate={employee.hourlyRate}
+          onChange={props.onChange}
         />
       ))}
     </tbody>

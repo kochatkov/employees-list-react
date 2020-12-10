@@ -7,7 +7,10 @@ const Employee = (props) => {
     <tr className={classes.Employee}>
       <td className={classes['Employee__cell']}>{props.id}</td>
       <td>
-        <input type="checkbox" />
+        <input
+          type="checkbox"
+          onChange={(e) => props.onChange(e.target.checked, props.id)}
+        />
       </td>
       <td className={classes['Employee__cell']}>{props.fullName}</td>
       <td className={classes['Employee__cell']}>{props.role}</td>

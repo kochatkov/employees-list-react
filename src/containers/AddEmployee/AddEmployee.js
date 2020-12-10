@@ -31,7 +31,6 @@ const creatFormControls = () => ({
 const AddEmployeeForm = (props) => {
   const [formControls, setFormControls] = useState(creatFormControls());
 
-  console.log(formControls);
   const submitHandler = (e) => {
     e.preventDefault();
   };

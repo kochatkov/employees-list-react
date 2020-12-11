@@ -1,4 +1,13 @@
 .Input {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.input {
+  background-color: rgba(228, 241, 254, 1);
+  border: none;
+  outline: none;
+  height: 30px;
+  padding-left: 10px;
 }

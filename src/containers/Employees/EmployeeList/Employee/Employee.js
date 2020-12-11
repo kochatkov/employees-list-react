@@ -5,13 +5,13 @@ import classes from './Employee.module.scss';
 const Employee = (props) => {
   return (
     <tr className={classes.Employee}>
-      <td className={classes['Employee__cell']}>{props.id}</td>
       <td>
         <input
           type="checkbox"
           onChange={(e) => props.onChange(e.target.checked, props.id)}
         />
       </td>
+      <td className={classes['Employee__cell--id']}>{props.id}</td>
       <td className={classes['Employee__cell']}>{props.fullName}</td>
       <td className={classes['Employee__cell']}>{props.role}</td>
       <td className={classes['Employee__cell']}>{props.businessLocation}</td>

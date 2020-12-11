@@ -4,9 +4,13 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 400px;
-  height: 400px;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   background-color: #fff;
   padding: 20px;
   box-sizing: border-box;
+  z-index: 3;
+}
+
+.ModalWindowWrapper {
+  position: relative;
 }

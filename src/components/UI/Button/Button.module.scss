@@ -1,3 +1,58 @@
-.Button {
+$blue-button: royalblue;
+$dark-blue: #0e2433;
+$darkred: darkred;
 
+.Button {
+  border-radius: 4px;
+  border: none;
+  height: 26px;
+  width: 150px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.add {
+  background-color: $blue-button;
+  color: white;
+  border: royalblue;
+
+  &:hover {
+    background-color: lighten($blue-button, 10%);
+  }
+}
+
+.edit {
+  background-color: #fff;
+  color: $dark-blue;
+  border: 1px solid $dark-blue;
+
+  &:hover:enabled {
+    color: #fff;
+    background-color: $dark-blue;
+  }
+
+  &:disabled,
+  &[disable] {
+    color: lighten($dark-blue, 50%);
+    border: 1px solid lighten($dark-blue, 50%);
+    cursor: default;
+  }
+}
+
+.delete {
+  background-color: #fff;
+  color: $darkred;
+  border: 1px solid $darkred;
+
+  &:hover:enabled {
+    background-color: $darkred;
+    color: #fff;
+  }
+
+  &:disabled,
+  &[disable] {
+    color: lighten($darkred, 50%);
+    border: 1px solid lighten($darkred, 50%);
+    cursor: default;
+  }
 }

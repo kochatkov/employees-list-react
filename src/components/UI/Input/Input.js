@@ -10,10 +10,12 @@ const Input = (props) => {
     <div className={classes.Input}>
       <label htmlFor={htmlFor}>{props.label}</label>
       <input
+        className={classes.input}
         type={inputType}
         id={htmlFor}
         value={props.value}
         onChange={props.onChange}
+        name={props.name}
       />
     </div>
   );
